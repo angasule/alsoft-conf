@@ -1,0 +1,5 @@
+alsoft-conf (1.4.3-1) unstable; urgency=low
+
+  * Initial release (Closes: #560410)
+
+ -- Matias D'Ambrosio <angasule@gmail.com>  Wed, 09 Dec 2009 23:13:07 -0300

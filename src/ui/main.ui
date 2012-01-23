@@ -1,0 +1,1630 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>457</width>
+    <height>411</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>oalsoft-conf</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_8">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="General_tab">
+       <attribute name="title">
+        <string>&amp;General</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="0">
+         <widget class="QGroupBox" name="output_format_groupBox">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>1</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="title">
+           <string>Output Format</string>
+          </property>
+          <widget class="QLabel" name="sample_depth_label">
+           <property name="geometry">
+            <rect>
+             <x>9</x>
+             <y>77</y>
+             <width>87</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Sample &amp;depth</string>
+           </property>
+           <property name="buddy">
+            <cstring>sample_depth_comboBox</cstring>
+           </property>
+          </widget>
+          <widget class="QComboBox" name="sample_depth_comboBox">
+           <property name="geometry">
+            <rect>
+             <x>219</x>
+             <y>77</y>
+             <width>65</width>
+             <height>27</height>
+            </rect>
+           </property>
+           <property name="currentIndex">
+            <number>0</number>
+           </property>
+           <item>
+            <property name="text">
+             <string>8-bit</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>16-bit</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>32-bit float</string>
+            </property>
+           </item>
+          </widget>
+          <widget class="QLabel" name="frequency_label">
+           <property name="geometry">
+            <rect>
+             <x>9</x>
+             <y>151</y>
+             <width>67</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>&amp;Frequency</string>
+           </property>
+           <property name="buddy">
+            <cstring>frequency_comboBox</cstring>
+           </property>
+          </widget>
+          <widget class="QComboBox" name="frequency_comboBox">
+           <property name="geometry">
+            <rect>
+             <x>219</x>
+             <y>151</y>
+             <width>71</width>
+             <height>27</height>
+            </rect>
+           </property>
+           <property name="editable">
+            <bool>true</bool>
+           </property>
+           <item>
+            <property name="text">
+             <string>44100</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>22050</string>
+            </property>
+           </item>
+          </widget>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QLabel" name="periods_label">
+            <property name="text">
+             <string>&amp;Update periods</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="periods_spinBox">
+            <property name="toolTip">
+             <string>Sets the number of update buffers for playback.
+A value of 0 means auto-select.</string>
+            </property>
+            <property name="value">
+             <number>4</number>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_11">
+          <item>
+           <widget class="QLabel" name="period_size_label">
+            <property name="text">
+             <string>&amp;Period Size</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="period_size_spinBox">
+            <property name="toolTip">
+             <string>Sets the number of update buffers for playback.
+A value of 0 means auto-select.</string>
+            </property>
+            <property name="maximum">
+             <number>99999</number>
+            </property>
+            <property name="value">
+             <number>1024</number>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="3" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QLabel" name="sources_label">
+            <property name="text">
+             <string>S&amp;ources</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="sources_spinBox">
+            <property name="toolTip">
+             <string>Sets the number of update buffers for playback.
+A value of 0 means auto-select.</string>
+            </property>
+            <property name="maximum">
+             <number>2048</number>
+            </property>
+            <property name="value">
+             <number>256</number>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="Backend_tab">
+       <attribute name="title">
+        <string>&amp;Backend</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_10">
+        <item row="0" column="0">
+         <widget class="QFrame" name="frame_5">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_7">
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_3">
+             <item>
+              <widget class="QLabel" name="label_7">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>Backends in &amp;use</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+               <property name="buddy">
+                <cstring>backends_in_use_listWidget</cstring>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QListWidget" name="backends_in_use_listWidget">
+               <property name="dragDropMode">
+                <enum>QAbstractItemView::InternalMove</enum>
+               </property>
+               <item>
+                <property name="text">
+                 <string notr="true">ALSA</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string notr="true">DirectSound</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string notr="true">OSS</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string notr="true">PortAudio</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string notr="true">PulseAudio</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string notr="true">Solaris</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Windows Multimedia</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>WAVE File Writer</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout">
+             <item>
+              <widget class="QPushButton" name="enable_backend_pushButton">
+               <property name="text">
+                <string>&lt;</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="disable_backend_pushButton">
+               <property name="text">
+                <string>&gt;</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_2">
+             <item>
+              <widget class="QLabel" name="label_8">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>&amp;Disabled backends</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+               <property name="buddy">
+                <cstring>disabled_backends_listWidget</cstring>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QListWidget" name="disabled_backends_listWidget">
+               <property name="dragDropMode">
+                <enum>QAbstractItemView::InternalMove</enum>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QFrame" name="frame_4">
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_7">
+           <item row="0" column="0">
+            <layout class="QHBoxLayout" name="horizontalLayout_5">
+             <item>
+              <widget class="QComboBox" name="comboBox">
+               <item>
+                <property name="text">
+                 <string notr="true">ALSA</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string notr="true">DirectSound</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string notr="true">OSS</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string notr="true">PortAudio</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string notr="true">PulseAudio</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string notr="true">Solaris</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>WAVE File Writer</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Windows Multimedia</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+           <item row="1" column="0">
+            <widget class="QStackedWidget" name="stackedWidget">
+             <property name="currentIndex">
+              <number>0</number>
+             </property>
+             <widget class="QWidget" name="ALSA_page">
+              <layout class="QGridLayout" name="gridLayout_6">
+               <item row="0" column="0" colspan="2">
+                <widget class="QCheckBox" name="ALSA_mmap_checkBox">
+                 <property name="toolTip">
+                  <string>Sets whether to try using mmap mode (helps reduce latencies and CPU consumption).
+If mmap isn't available, it will automatically fall back to non-mmap mode.</string>
+                 </property>
+                 <property name="text">
+                  <string> Use mmap</string>
+                 </property>
+                 <property name="checked">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="label_9">
+                 <property name="text">
+                  <string>Playback device</string>
+                 </property>
+                 <property name="buddy">
+                  <cstring>ALSA_device_lineEdit</cstring>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1" colspan="2">
+                <widget class="QLineEdit" name="ALSA_device_lineEdit">
+                 <property name="text">
+                  <string>default</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QLabel" name="label_10">
+                 <property name="text">
+                  <string>Recording device</string>
+                 </property>
+                 <property name="buddy">
+                  <cstring>ALSA_capture_lineEdit</cstring>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="1" colspan="2">
+                <widget class="QLineEdit" name="ALSA_capture_lineEdit">
+                 <property name="text">
+                  <string>default</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="DS_page">
+              <layout class="QGridLayout" name="gridLayout_4">
+               <item row="0" column="0">
+                <widget class="QLabel" name="label_11">
+                 <property name="text">
+                  <string>No options available for this backend</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="OSS_page">
+              <layout class="QGridLayout" name="gridLayout_5">
+               <item row="0" column="0">
+                <widget class="QLabel" name="label_12">
+                 <property name="text">
+                  <string>Playback device</string>
+                 </property>
+                 <property name="buddy">
+                  <cstring>ALSA_device_lineEdit</cstring>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QLineEdit" name="OSS_device_lineEdit">
+                 <property name="text">
+                  <string>/dev/dsp</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="label_13">
+                 <property name="text">
+                  <string>Recording device</string>
+                 </property>
+                 <property name="buddy">
+                  <cstring>ALSA_capture_lineEdit</cstring>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="QLineEdit" name="OSS_capture_lineEdit">
+                 <property name="text">
+                  <string>/dev/dsp</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="PortAudio_page">
+              <layout class="QGridLayout" name="gridLayout_14">
+               <item row="0" column="0">
+                <widget class="QLabel" name="label_4">
+                 <property name="text">
+                  <string>Output device index</string>
+                 </property>
+                 <property name="buddy">
+                  <cstring>PortAudio_device_index_spinBox</cstring>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QSpinBox" name="PortAudio_device_index_spinBox">
+                 <property name="toolTip">
+                  <string>Sets the device index for output.
+Negative values will use the default as given by PortAudio itself.</string>
+                 </property>
+                 <property name="minimum">
+                  <number>-1</number>
+                 </property>
+                 <property name="value">
+                  <number>-1</number>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="PulseAudio_page">
+              <layout class="QGridLayout" name="gridLayout_15">
+               <item row="0" column="0">
+                <widget class="QLabel" name="label_6">
+                 <property name="text">
+                  <string>No options available for this backend</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="Solaris_page">
+              <layout class="QGridLayout" name="gridLayout_13">
+               <item row="0" column="0">
+                <widget class="QLabel" name="label_15">
+                 <property name="text">
+                  <string>Device</string>
+                 </property>
+                 <property name="buddy">
+                  <cstring>ALSA_device_lineEdit</cstring>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QLineEdit" name="Solaris_device_lineEdit">
+                 <property name="text">
+                  <string>/dev/audio</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="WAVE_page">
+              <layout class="QGridLayout" name="gridLayout_11">
+               <item row="0" column="0">
+                <widget class="QLabel" name="label_3">
+                 <property name="text">
+                  <string>Output file</string>
+                 </property>
+                 <property name="buddy">
+                  <cstring>WAVE_file_lineEdit</cstring>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QLineEdit" name="WAVE_file_lineEdit">
+                 <property name="toolTip">
+                  <string>Sets the filename of the wave file to write to. An empty name prevents the backend from opening, even when explicitly requested.
+THIS WILL OVERWRITE EXISTING FILES WITHOUT QUESTION!</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="WM_page">
+              <layout class="QGridLayout" name="gridLayout_12">
+               <item row="0" column="0">
+                <widget class="QLabel" name="label_2">
+                 <property name="text">
+                  <string>No options available for this backend</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="Effects_tab">
+       <attribute name="title">
+        <string>&amp;Effects</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_16">
+        <item row="0" column="0" colspan="2">
+         <widget class="QFrame" name="frame">
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_17">
+           <item row="0" column="0">
+            <layout class="QHBoxLayout" name="horizontalLayout_8">
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_6">
+               <item>
+                <widget class="QLabel" name="label_16">
+                 <property name="text">
+                  <string>Allo&amp;wed effects</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                 <property name="buddy">
+                  <cstring>allowed_effects_listWidget</cstring>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QListWidget" name="allowed_effects_listWidget">
+                 <property name="toolTip">
+                  <string>Sets which effects to exclude, preventing apps from using them.
+This can help for apps that try to use effects which are too CPU intensive for the system to handle.</string>
+                 </property>
+                 <item>
+                  <property name="text">
+                   <string>EAX Reverb</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Echo</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Reverb</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_4">
+               <item>
+                <widget class="QPushButton" name="allow_effect_pushButton">
+                 <property name="text">
+                  <string>&lt;</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="exclude_effect_pushButton">
+                 <property name="text">
+                  <string>&gt;</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_5">
+               <item>
+                <widget class="QLabel" name="label_17">
+                 <property name="text">
+                  <string>E&amp;xcluded effects</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                 <property name="buddy">
+                  <cstring>excluded_effects_listWidget</cstring>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QListWidget" name="excluded_effects_listWidget">
+                 <property name="toolTip">
+                  <string>Sets which effects to exclude, preventing apps from using them.
+This can help for apps that try to use effects which are too CPU intensive for the system to handle.</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_18">
+          <property name="text">
+           <string>Auxilia&amp;ry Effect slots</string>
+          </property>
+          <property name="buddy">
+           <cstring>EFX_slots_spinBox</cstring>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QSpinBox" name="EFX_slots_spinBox">
+          <property name="toolTip">
+           <string>Sets the maximum number of Auxiliary Effect Slots an app can create.
+A slot can use a non-negligible amount of CPU time if an effect is set on it even if no sources are feeding it,
+so this may help when apps use more than the system can handle.</string>
+          </property>
+          <property name="value">
+           <number>4</number>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_19">
+          <property name="text">
+           <string>Auxiliary sends &amp;per source</string>
+          </property>
+          <property name="buddy">
+           <cstring>EFX_sends_spinBox</cstring>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QSpinBox" name="EFX_sends_spinBox">
+          <property name="toolTip">
+           <string>Sets the maximum number of auxiliary sends per source.
+The total number of sends possible is defined at compile time and thus can not be increased beyond the default.</string>
+          </property>
+          <property name="value">
+           <number>2</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="Speakers_tab">
+       <attribute name="title">
+        <string>&amp;Speakers</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_7">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_10">
+          <item>
+           <widget class="QComboBox" name="speakers_comboBox">
+            <property name="currentIndex">
+             <number>2</number>
+            </property>
+            <item>
+             <property name="text">
+              <string>mono</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>headphones</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>stereo</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>4-channel</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>5.1</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>6.1</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>7.1</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <widget class="QStackedWidget" name="layout_presets_stackedWidget">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="currentIndex">
+             <number>0</number>
+            </property>
+            <widget class="QWidget" name="page">
+             <layout class="QHBoxLayout" name="horizontalLayout_3">
+              <item>
+               <widget class="QRadioButton" name="layout_default_radioButton">
+                <property name="text">
+                 <string>Default</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+                <attribute name="buttonGroup">
+                 <string>stereo_layout_buttonGroup</string>
+                </attribute>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="layout_narrow_radioButton">
+                <property name="text">
+                 <string>Narrow</string>
+                </property>
+                <attribute name="buttonGroup">
+                 <string>stereo_layout_buttonGroup</string>
+                </attribute>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="layout_wide_radioButton">
+                <property name="text">
+                 <string>Wide</string>
+                </property>
+                <attribute name="buttonGroup">
+                 <string>stereo_layout_buttonGroup</string>
+                </attribute>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="layout_custom_radioButton">
+                <property name="text">
+                 <string>Custom</string>
+                </property>
+                <attribute name="buttonGroup">
+                 <string>stereo_layout_buttonGroup</string>
+                </attribute>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="page_2">
+             <layout class="QHBoxLayout" name="horizontalLayout_9"/>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_20">
+          <item>
+           <widget class="QGraphicsView" name="graphicsView">
+            <property name="toolTip">
+             <string>Drag the speaker icons to match your physical layout.
+Only direction is taken into account, not distance.</string>
+            </property>
+            <property name="verticalScrollBarPolicy">
+             <enum>Qt::ScrollBarAlwaysOff</enum>
+            </property>
+            <property name="horizontalScrollBarPolicy">
+             <enum>Qt::ScrollBarAlwaysOff</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QGridLayout" name="gridLayout_31">
+            <item row="0" column="0">
+             <widget class="QLabel" name="speaker_bl_label">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>Back Left</string>
+              </property>
+              <property name="buddy">
+               <cstring>speaker_bl_spinBox</cstring>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QSpinBox" name="speaker_bl_spinBox">
+              <property name="minimum">
+               <number>-179</number>
+              </property>
+              <property name="maximum">
+               <number>180</number>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="speaker_sl_label">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>Side Left</string>
+              </property>
+              <property name="buddy">
+               <cstring>speaker_sl_spinBox</cstring>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QSpinBox" name="speaker_sl_spinBox">
+              <property name="minimum">
+               <number>-179</number>
+              </property>
+              <property name="maximum">
+               <number>180</number>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="speaker_fl_label">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>Front Left</string>
+              </property>
+              <property name="buddy">
+               <cstring>speaker_fl_spinBox</cstring>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QSpinBox" name="speaker_fl_spinBox">
+              <property name="minimum">
+               <number>-179</number>
+              </property>
+              <property name="maximum">
+               <number>180</number>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QLabel" name="speaker_fc_label">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>Front Centre</string>
+              </property>
+              <property name="buddy">
+               <cstring>speaker_fc_spinBox</cstring>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <widget class="QSpinBox" name="speaker_fc_spinBox">
+              <property name="minimum">
+               <number>-179</number>
+              </property>
+              <property name="maximum">
+               <number>180</number>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="0">
+             <widget class="QLabel" name="speaker_fr_label">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>Front Right</string>
+              </property>
+              <property name="buddy">
+               <cstring>speaker_fr_spinBox</cstring>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="1">
+             <widget class="QSpinBox" name="speaker_fr_spinBox">
+              <property name="minimum">
+               <number>-179</number>
+              </property>
+              <property name="maximum">
+               <number>180</number>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="0">
+             <widget class="QLabel" name="speaker_sr_label">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>Side Right</string>
+              </property>
+              <property name="buddy">
+               <cstring>speaker_sr_spinBox</cstring>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="1">
+             <widget class="QSpinBox" name="speaker_sr_spinBox">
+              <property name="minimum">
+               <number>-179</number>
+              </property>
+              <property name="maximum">
+               <number>180</number>
+              </property>
+             </widget>
+            </item>
+            <item row="6" column="1">
+             <widget class="QSpinBox" name="speaker_br_spinBox">
+              <property name="minimum">
+               <number>-179</number>
+              </property>
+              <property name="maximum">
+               <number>180</number>
+              </property>
+             </widget>
+            </item>
+            <item row="6" column="0">
+             <widget class="QLabel" name="speaker_br_label">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>Back Right</string>
+              </property>
+              <property name="buddy">
+               <cstring>speaker_br_spinBox</cstring>
+              </property>
+             </widget>
+            </item>
+            <item row="7" column="0">
+             <widget class="QLabel" name="speaker_bc_label">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>Back Centre</string>
+              </property>
+              <property name="buddy">
+               <cstring>speaker_br_spinBox</cstring>
+              </property>
+             </widget>
+            </item>
+            <item row="7" column="1">
+             <widget class="QSpinBox" name="speaker_bc_spinBox">
+              <property name="minimum">
+               <number>-179</number>
+              </property>
+              <property name="maximum">
+               <number>180</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QStackedWidget" name="layout_options_stackedWidget">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="page_3">
+           <layout class="QGridLayout" name="gridLayout">
+            <item row="0" column="0">
+             <widget class="QComboBox" name="crossfeed_comboBox">
+              <property name="toolTip">
+               <string>High crossfeed makes virtual speakers appear closer to each other.
+Users of headphones may want to try various settings.</string>
+              </property>
+              <property name="currentIndex">
+               <number>1</number>
+              </property>
+              <item>
+               <property name="text">
+                <string>None</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Low</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Middle</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>High</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QCheckBox" name="easy_crossfeed_checkBox">
+              <property name="text">
+               <string>Eas&amp;y crossfeed</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="page_4">
+           <layout class="QGridLayout" name="gridLayout_3">
+            <item row="0" column="0">
+             <widget class="QCheckBox" name="dupstereo_checkBox">
+              <property name="toolTip">
+               <string>Sets whether to duplicate stereo sounds on the rear and side speakers for 4+ channel output.
+This can make stereo sources substantially louder than mono or even 4+ channel sources,
+but provides a &quot;fuller&quot; playback quality.</string>
+              </property>
+              <property name="text">
+               <string>&amp;Duplicate stereo sounds on the rear speakers.</string>
+              </property>
+              <property name="wordWrap" stdset="0">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="page_5"/>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_6">
+      <item>
+       <widget class="QPushButton" name="global_or_local_pushButton">
+        <property name="text">
+         <string>&amp;View global configuration</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="apply_pushButton">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>&amp;Apply</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="close_or_cancel_pushButton">
+        <property name="text">
+         <string>&amp;Close</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <action name="action_Global_configuration">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Global configuration</string>
+   </property>
+  </action>
+  <action name="action_Local_configuration">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Local configuration</string>
+   </property>
+  </action>
+  <action name="action_Reset">
+   <property name="text">
+    <string>&amp;Reset</string>
+   </property>
+  </action>
+  <action name="action_Save">
+   <property name="text">
+    <string>&amp;Save</string>
+   </property>
+  </action>
+  <action name="action_Quit">
+   <property name="text">
+    <string>&amp;Quit</string>
+   </property>
+  </action>
+ </widget>
+ <tabstops>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>sample_depth_comboBox</tabstop>
+  <tabstop>frequency_comboBox</tabstop>
+  <tabstop>backends_in_use_listWidget</tabstop>
+  <tabstop>enable_backend_pushButton</tabstop>
+  <tabstop>disable_backend_pushButton</tabstop>
+  <tabstop>disabled_backends_listWidget</tabstop>
+  <tabstop>comboBox</tabstop>
+  <tabstop>ALSA_mmap_checkBox</tabstop>
+  <tabstop>ALSA_device_lineEdit</tabstop>
+  <tabstop>ALSA_capture_lineEdit</tabstop>
+  <tabstop>OSS_device_lineEdit</tabstop>
+  <tabstop>OSS_capture_lineEdit</tabstop>
+  <tabstop>PortAudio_device_index_spinBox</tabstop>
+  <tabstop>Solaris_device_lineEdit</tabstop>
+  <tabstop>WAVE_file_lineEdit</tabstop>
+  <tabstop>allowed_effects_listWidget</tabstop>
+  <tabstop>allow_effect_pushButton</tabstop>
+  <tabstop>exclude_effect_pushButton</tabstop>
+  <tabstop>excluded_effects_listWidget</tabstop>
+  <tabstop>EFX_slots_spinBox</tabstop>
+  <tabstop>EFX_sends_spinBox</tabstop>
+  <tabstop>speakers_comboBox</tabstop>
+  <tabstop>layout_default_radioButton</tabstop>
+  <tabstop>layout_narrow_radioButton</tabstop>
+  <tabstop>layout_wide_radioButton</tabstop>
+  <tabstop>layout_custom_radioButton</tabstop>
+  <tabstop>graphicsView</tabstop>
+  <tabstop>crossfeed_comboBox</tabstop>
+  <tabstop>easy_crossfeed_checkBox</tabstop>
+  <tabstop>dupstereo_checkBox</tabstop>
+  <tabstop>apply_pushButton</tabstop>
+  <tabstop>close_or_cancel_pushButton</tabstop>
+  <tabstop>global_or_local_pushButton</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>comboBox</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>stackedWidget</receiver>
+   <slot>setCurrentIndex(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>137</x>
+     <y>239</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>143</x>
+     <y>298</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sample_depth_comboBox</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>setModifiedTrue()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>295</x>
+     <y>139</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>456</x>
+     <y>97</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ALSA_mmap_checkBox</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>setModifiedTrue()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>72</x>
+     <y>290</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>3</x>
+     <y>222</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ALSA_device_lineEdit</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>setModifiedTrue()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>433</x>
+     <y>324</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>454</x>
+     <y>273</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ALSA_capture_lineEdit</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>setModifiedTrue()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>341</x>
+     <y>355</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>233</x>
+     <y>318</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>backends_in_use_listWidget</sender>
+   <signal>indexesMoved(QModelIndexList)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>setModifiedTrue()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>89</x>
+     <y>103</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>2</x>
+     <y>118</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>OSS_device_lineEdit</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>setModifiedTrue()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>433</x>
+     <y>291</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>455</x>
+     <y>205</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>OSS_capture_lineEdit</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>setModifiedTrue()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>433</x>
+     <y>322</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>456</x>
+     <y>313</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>WAVE_file_lineEdit</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>setModifiedTrue()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>191</x>
+     <y>321</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>251</x>
+     <y>316</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>PortAudio_device_index_spinBox</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>setModifiedTrue()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>433</x>
+     <y>326</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>236</x>
+     <y>389</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Solaris_device_lineEdit</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>setModifiedTrue()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>232</x>
+     <y>304</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>243</x>
+     <y>375</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>EFX_sends_spinBox</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>setModifiedTrue()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>261</x>
+     <y>364</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>455</x>
+     <y>352</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>EFX_slots_spinBox</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>setModifiedTrue()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>411</x>
+     <y>311</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>380</x>
+     <y>384</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>easy_crossfeed_checkBox</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>setModifiedTrue()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>276</x>
+     <y>350</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>384</x>
+     <y>378</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>dupstereo_checkBox</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>setModifiedTrue()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>107</x>
+     <y>357</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>231</x>
+     <y>379</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>frequency_comboBox</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>setModifiedTrue()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>259</x>
+     <y>198</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>385</x>
+     <y>-13</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>periods_spinBox</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>setModifiedTrue()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>381</x>
+     <y>279</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>415</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>period_size_spinBox</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>setModifiedTrue()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>411</x>
+     <y>308</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>457</x>
+     <y>28</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sources_spinBox</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>setModifiedTrue()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>356</x>
+     <y>349</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>455</x>
+     <y>136</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>disabled_backends_listWidget</sender>
+   <signal>indexesMoved(QModelIndexList)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>setModifiedTrue()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>375</x>
+     <y>84</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>457</x>
+     <y>13</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>setModifiedTrue()</slot>
+ </slots>
+ <buttongroups>
+  <buttongroup name="stereo_layout_buttonGroup"/>
+ </buttongroups>
+</ui>

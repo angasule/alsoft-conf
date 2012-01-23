@@ -1,0 +1,14 @@
+Source: alsoft-conf
+Section: sound
+Priority: extra
+Maintainer: Debian Games Team <pkg-games-devel@lists.alioth.debian.org>
+Uploaders: Matias D'Ambrosio <angasule@gmail.com>
+Build-Depends: debhelper (>= 7.3), cmake, libqt4-dev
+Standards-Version: 3.8.3
+Homepage: http://www.anduin.net/~angasule/
+
+Package: alsoft-conf
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: OpenAL-Soft configuration utility
+ An easy to use tool to configure OpenAL-Soft.

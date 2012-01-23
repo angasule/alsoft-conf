@@ -1,0 +1,6 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=OpenAL-Soft Configuration Utility
+Exec=alsoft-conf
+Categories=Settings;

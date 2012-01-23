@@ -1,0 +1,2 @@
+?package(alsoft-conf):needs="X11" section="Applications/System/Administration"\
+  title="OpenAl-Soft Configurator" command="/usr/bin/alsoft-conf"

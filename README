@@ -1,0 +1,8 @@
+BUILDING INSTRUCTIONS
+=====================
+
+Really simple, just do:
+# mkdir build && cd build && cmake .. && make
+
+Then run:
+# ./alsoft-conf
